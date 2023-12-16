@@ -8,7 +8,6 @@ export default async function Page() {
   } = await supabase.auth.getSession();
 
   const { data, error } = await supabase.from("businesses").select("name,id");
-  console.log(data, error);
 
   return (
     <main className="px-6 py-5">

@@ -40,7 +40,6 @@ export default async function Page() {
     HTMLButtonElement
   > = async () => {
     const response = await authenticateUsingGoogle();
-    console.log(response);
   };
   return (
     <main className="flex justify-center items-center h-screen w-100 flex-col">
