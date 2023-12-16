@@ -24,12 +24,12 @@ export default function Page() {
         .eq("id", id);
       if (error) {
         toast.error(error.message);
-        router.push("/admin/internal/businesses");
+        router.replace("/admin/internal/businesses");
         return;
       }
       if (data?.length === 0) {
         toast.error(`Business with id ${id} not found`);
-        router.push("/admin/internal/businesses");
+        router.replace("/admin/internal/businesses");
         return;
       } else {
         setBusiness(data[0]);
@@ -50,7 +50,7 @@ export default function Page() {
     if (error) {
       toast.error(error.message);
     } else {
-      router.push("/admin/internal/businesses");
+      router.replace("/admin/internal/businesses");
     }
   };
   return (

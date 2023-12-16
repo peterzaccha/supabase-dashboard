@@ -25,7 +25,8 @@ export default async function Page() {
     if (response.error) {
       toast.error(response.error.message);
     } else {
-      router.push("/admin/internal/dashboard");
+      router.replace("/admin/internal/dashboard");
+      router.refresh();
     }
   };
   const login: LoginFormProps["onSubmit"] = async (data) => {
@@ -33,7 +34,8 @@ export default async function Page() {
     if (response.error) {
       toast.error(response.error.message);
     } else {
-      router.push("/admin/internal/dashboard");
+      router.replace("/admin/internal/dashboard");
+      router.refresh();
     }
   };
   const googleAuthentication: FormEventHandler<

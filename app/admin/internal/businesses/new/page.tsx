@@ -18,7 +18,7 @@ export default function Page() {
     if (error) {
       toast.error(error.message);
     } else {
-      router.push("/admin/internal/businesses");
+      router.replace("/admin/internal/businesses");
     }
   };
   return (

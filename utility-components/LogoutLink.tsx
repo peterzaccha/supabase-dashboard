@@ -14,7 +14,8 @@ export default function LogoutLink() {
     if (error) {
       toast.error(error.message);
     } else {
-      router.push("/");
+      router.replace("/");
+      router.refresh();
     }
   }
 
